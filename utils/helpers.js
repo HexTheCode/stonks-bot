@@ -1,0 +1,19 @@
+const axios = require("axios");
+require("dotenv").config();
+/*
+let url = `https://api.polygon.io/v2/reference/tickers?sort=ticker&locale=US&search=AAPL&perpage=50&page=1&apiKey=${process.env.API_KEY}`;
+
+const apiRequest = async () => {
+  let response = await axios.get(url);
+  let tickers = response["data"]["tickers"][0];
+  return await tickers["name"];
+};
+*/
+const search = async (term) => {
+  let url = `https://api.polygon.io/v2/reference/tickers?sort=ticker&locale=US&search=${term}&perpage=50&page=1&apiKey=${process.env.API_KEY}`;
+  let response = await axios.get(url);
+  let tickers = response["data"]["tickers"];
+  return await tickers;
+};
+
+module.exports = { search };
