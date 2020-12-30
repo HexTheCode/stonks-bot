@@ -9,6 +9,13 @@ const apiRequest = async () => {
   return await tickers["name"];
 };
 */
+
+const detail = async (term) => {
+  let url = `https://api.polygon.io/v1/meta/symbols/${term}/company?apiKey=${process.env.API_KEY}`;
+  let response = await axios.get(url);
+  return await response["data"];
+};
+
 const search = async (term) => {
   let url = `https://api.polygon.io/v2/reference/tickers?sort=ticker&locale=US&search=${term}&perpage=50&page=1&apiKey=${process.env.API_KEY}`;
   let response = await axios.get(url);
@@ -16,4 +23,4 @@ const search = async (term) => {
   return await tickers;
 };
 
-module.exports = { search };
+module.exports = { search, detail };

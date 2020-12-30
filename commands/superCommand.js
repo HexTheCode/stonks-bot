@@ -14,4 +14,3 @@ class SuperCommand {
     }
 }
 exports.default = SuperCommand;
-//# sourceMappingURL=superCommand.js.map

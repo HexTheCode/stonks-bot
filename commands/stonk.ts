@@ -1,6 +1,7 @@
 import SuperCommand from './superCommand';
 import Command from './command';
 import Search from './search';
+import Detail from './detail';
 
 class Stonk extends SuperCommand {
   public triggered: string;
@@ -12,7 +13,10 @@ class Stonk extends SuperCommand {
     this.triggered = triggered;
     const search = new Search();
     search.Search("search");
+    const detail = new Detail();
+    detail.Detail("detail");
     this.subcommands.push(search);
+    this.subcommands.push(detail);
   }
 
   runnable(msg: any): void {

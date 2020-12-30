@@ -16,4 +16,3 @@ class Greeting extends command_1.default {
     }
 }
 exports.default = Greeting;
-//# sourceMappingURL=greeting.js.map

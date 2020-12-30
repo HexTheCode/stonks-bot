@@ -10,4 +10,3 @@ class Today extends command_1.default {
     }
 }
 exports.default = Today;
-//# sourceMappingURL=today.js.map
