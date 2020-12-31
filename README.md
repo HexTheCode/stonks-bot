@@ -13,3 +13,4 @@
 > - **!stonk**: (_super command_)
 >   - **search**: search companies which are in the stock market. i.e: _!stonk search Apple_
 >   - **detail**: show the details of a company. i.e: _!stonk detail Apple_
+>   - **news**: show the latest new of a company. i.e: _!stonk news Apple_
